@@ -1,10 +1,7 @@
-// src/components/BackLink.jsx
-
-// CORRECT (Starts with an uppercase letter)
 import { useNavigate } from "react-router-dom";
 
 const BackLink = () => {
-  const navigate = useNavigate(); // This is now valid
+  const navigate = useNavigate();
 
   const goBack = () => {
     navigate(-1);

@@ -2,10 +2,9 @@ import { NavLink } from "react-router-dom";
 import { useSavedEvents } from "./savedEventsUtils";
 
 function EventCard({ event }) {
-  const { addEvent, isSaved } = useSavedEvents(); // Use hook
-
+  const { addEvent, isSaved } = useSavedEvents(); 
   const handleSave = (e) => {
-    e.preventDefault(); // Prevents NavLink from navigating immediately
+    e.preventDefault(); 
     addEvent(event.id);
     alert("Lesson saved!");
   };
@@ -30,7 +29,7 @@ function EventCard({ event }) {
 
         <button
           onClick={handleSave}
-          disabled={isSaved(event.id)} // Disable button if already saved
+          disabled={isSaved(event.id)}
           className={`px-4 py-2 rounded font-medium ${
             isSaved(event.id)
               ? "bg-gray-400 cursor-not-allowed"

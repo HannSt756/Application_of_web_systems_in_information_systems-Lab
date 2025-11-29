@@ -1,10 +1,6 @@
-// src/components/SavedEventsProvider.jsx
-
 import { useState } from "react";
-// Import the context constant from the *utility* file in the same folder
 import { SavedEventsContext } from "./savedEventsUtils.jsx"; 
 
-// The Provider component that wraps your App
 export const SavedEventsProvider = ({ children }) => {
   const [savedEventIds, setSavedEventIds] = useState([]);
 

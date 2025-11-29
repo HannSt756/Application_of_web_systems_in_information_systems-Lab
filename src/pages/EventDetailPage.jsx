@@ -1,5 +1,5 @@
 import eventsData from "../data/events.json";
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from "react-router-dom";
 
 function EventDetailPage() {
   const { id } = useParams();
@@ -41,14 +41,12 @@ function EventDetailPage() {
       <p className="text-gray-700 mb-6">{event["About-the-organisation"]}</p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">Event Details</h2>
-      {/* Assuming your JSON structure has a field for full details */}
       <p className="text-gray-700">
         {event.full_description || "No full description available."}
       </p>
 
-      {/* Example of adding a back button */}
       <button
-        onClick={() => navigate(-1)} // navigate(-1) goes back one step in history
+        onClick={() => navigate(-1)}
         className="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
         ← Back to all events

@@ -1,4 +1,3 @@
-// src/App.jsx
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
@@ -22,7 +21,6 @@ function App() {
         <Route path="/Events" element={<EventsPage />}></Route>
         <Route path="/saved-lessons" element={<SavedLessonsPage />} />
         <Route path="/event/:id" element={<EventDetailPage />} />
-        {/* Add more routes here for other pages like /about, /contact */}
       </Routes>
     </>
   );

@@ -1,7 +1,4 @@
-// src/pages/SavedLessonsPage.jsx
-
 import React, { useState } from 'react';
-// Import the hook from the *components* folder now, not a context folder
 import { useSavedEvents } from "../components/savedEventsUtils.jsx"; 
 import eventsData from "../data/events.json";
 import { NavLink } from "react-router-dom";
@@ -10,7 +7,6 @@ const SavedLessonsPage = () => {
   const { savedEventIds, removeEvent } = useSavedEvents();
   const [showQrCode, setShowQrCode] = useState(null); 
 
-  // Filter events data to match saved IDs
   const savedEvents = eventsData.filter((event) =>
     savedEventIds.includes(event.id)
   );
